@@ -9,6 +9,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Whitebox Overall System
 
+image::05_whitebox.excalidraw.png[Whitebox]
+
 
 
 _**<Overview Diagram>**_

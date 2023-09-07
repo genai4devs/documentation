@@ -35,7 +35,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         publish_dir: ./build/asciidoc/ # Replace with the path where HTML files are generated
         keep_files: true
         publish_branch: gh-pages # Branch to deploy the generated HTML files to

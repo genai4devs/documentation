@@ -443,9 +443,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="section-introduction-and-goals">Introduction and Goals</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>FlexiMind is a chatbot which can be asked questions about specific text content. This content is to be provided upfront. The answers to the questions are to be generated with the use of Generative AI, specifically Large Language Models (LLMs).</p>
+</div>
 <div class="sect2">
 <h3 id="_requirements_overview">Requirements Overview</h3>
-
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FR-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provide content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexiMind allows users to provide their specific text content which is then used as a context in the conversation with a chatbot.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FR-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ask contextual questions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexiMind allows users to ask questions in a specific context created from the previously provided text content.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FR-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Choose chatbot&#8217;s LLM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexiMind allows users to configure which LLM is to be used to generate chatbot&#8217;s answers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FR-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GUI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexiMind offers a web GUI to provide functionalities FR-1, FR-2 and FR-3 to users.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NFR-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexiMind is to be deployed in the cloud environment.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_quality_goals">Quality Goals</h3>
@@ -485,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-09-07 08:38:18 UTC
+Last updated 2023-09-08 07:22:57 UTC
 </div>
 </div>
 </body>

@@ -3,5 +3,33 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-solution-strategy]]
 == Solution Strategy
 
+Our approach is founded on the Retrieval Augmented Generation (RAG) methodology.
+
+To increase the precision of LLM and improve it with specific domain vernacular without requiring supplementary training, we execute a semantic search based on the user's prompt utilizing a knowledge base.
+The outcomes of these searches are then employed to augment the context. This augmented context is subsequently deployed in conjunction with the original prompt to query one of the available LLMs.
+
+.A brief overview of RAG approach used in FlexiMind.
+image::04_rag_approach.excalidraw.png[]
+
+[cols="1,2,3"]
+|===
+|Quality goal|Scenario|Solution approach
+
+|Speed
+|Solution should provide answers in reasonable time.
+|Cloud based scaling, fast knowledge access with Amazon Kendra.
+
+|Privacy
+|Solution should be applicable for storing and quering sensitive data.
+|Ability to work with locally hosted LLMs, ability to run on private cloud.
+
+|Accuracy
+|Solution should be fine tuned for requested domain knowledge.
+|Use of RAG, semantic searching and indexing.
+
+|Cost effectiveness
+|Solution should be flexible for different cost options.
+|Proper usage of AWS services, ability to run on other cloud providers and also on private clouds.
 
 
+|===

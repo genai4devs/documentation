@@ -9,6 +9,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 === Whitebox Overall System
 
+.Overall FlexiMind system.
 image::05_whitebox.excalidraw.png[Whitebox]
 
 

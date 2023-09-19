@@ -653,6 +653,55 @@ See <a href="https://arc42.org" class="bare">https://arc42.org</a>.</p>
 <div class="sect1">
 <h2 id="section-solution-strategy">4. Solution Strategy</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Our approach is founded on the Retrieval Augmented Generation (RAG) methodology.</p>
+</div>
+<div class="paragraph">
+<p>To increase the precision of LLM and improve it with specific domain vernacular without requiring supplementary training, we execute a semantic search based on the user&#8217;s prompt utilizing a knowledge base.
+The outcomes of these searches are then employed to augment the context. This augmented context is subsequently deployed in conjunction with the original prompt to query one of the available LLMs.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/04_rag_approach.excalidraw.png" alt="04 rag approach.excalidraw">
+</div>
+<div class="title">Figure 1. A brief overview of RAG approach used in FlexiMind.</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quality goal</th>
+<th class="tableblock halign-left valign-top">Scenario</th>
+<th class="tableblock halign-left valign-top">Solution approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should provide answers in reasonable time.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud based scaling, fast knowledge access with Amazon Kendra.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be applicable for storing and quering sensitive data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ability to work with locally hosted LLMs, ability to run on private cloud.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accuracy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be fine tuned for requested domain knowledge.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use of RAG, semantic searching and indexing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cost effectiveness</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be flexible for different cost options.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proper usage of AWS services, ability to run on other cloud providers and also on private clouds.</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -943,7 +992,7 @@ building block instances depicted in this diagram.&gt;</em></p>
 <div id="footer">
 <div id="footer-text">
 Version 8.2 EN<br>
-Last updated 2023-09-19 07:22:37 UTC
+Last updated 2023-09-19 07:53:29 UTC
 </div>
 </div>
 </body>

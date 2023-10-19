@@ -12,7 +12,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 .Overall FlexiMind system.
 image::05_whitebox.excalidraw.png[Whitebox]
 
-
+.Domain model
+image::05_domain.drawio.png[Domain]
 
 _**<Overview Diagram>**_
 

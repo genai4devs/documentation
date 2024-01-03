@@ -457,25 +457,72 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="title">Figure 2. Domain model</div>
 </div>
-<div class="paragraph">
-<p><em><strong>&lt;Overview Diagram&gt;</strong></em></p>
-</div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Motivation</dt>
-<dd>
-<p><em>&lt;text explanation&gt;</em></p>
-</dd>
 <dt class="hdlist1">Contained Building Blocks</dt>
-<dd>
-<p><em>&lt;Description of contained building block (black boxes)&gt;</em></p>
-</dd>
-<dt class="hdlist1">Important Interfaces</dt>
-<dd>
-<p><em>&lt;Description of important interfaces&gt;</em></p>
-</dd>
 </dl>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Building Block</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">chat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core chat domain responsible for semantic indexing of the documents, querying the documents in context of conversation and keeping conversation history.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Important Interfaces</dt>
+</dl>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Interface</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cognito</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authentication and authorization service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S3 Bucket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document storage to keep document sources.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aurora</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless database service (using PostgreSQL + PG_Vector) for document indexing and semantic search.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Bedrock</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Serverless LLM service to provide base large language models for private conversations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open AI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open connection with OpenAI provided LLMs (GPT-3.5/GPT-4) used for public conversations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamo DB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document database for persisting conversations, contexts and tenant data.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect3">
 <h4 id="_name_black_box_1">&lt;Name black box 1&gt;</h4>
 <div class="paragraph">
@@ -570,7 +617,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-03 14:50:42 UTC
+Last updated 2024-01-03 15:02:14 UTC
 </div>
 </div>
 </body>

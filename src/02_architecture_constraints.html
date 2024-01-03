@@ -443,13 +443,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="section-architecture-constraints">Architecture Constraints</h2>
 <div class="sectionbody">
-
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The core logic that involves interaction with LLM should use bleeding edge libraries and API, therefore we should focus on Python as a main programming language for coding the backend part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud/AWS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The application must be cloud ready using cloud native approach (AWS).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cost effectiveness</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The application should not generate extensive costs when not in use, that implies serverless solution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure independence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Although Fleximind is implemented as AWS native application, ports and adapters approach should be used to make it possible to migrate to other cloud providers or even on-premise infrastructure.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-19 09:49:32 UTC
+Last updated 2024-01-03 08:59:00 UTC
 </div>
 </div>
 </body>

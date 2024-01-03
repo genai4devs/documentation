@@ -607,6 +607,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="section-architecture-constraints">2. Architecture Constraints</h2>
 <div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The core logic that involves interaction with LLM should use bleeding edge libraries and API, therefore we should focus on Python as a main programming language for coding the backend part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud/AWS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The application must be cloud ready using cloud native approach (AWS).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cost effectiveness</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The application should not generate extensive costs when not in use, that implies serverless solution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AC-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure independence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Although Fleximind is implemented as AWS native application, ports and adapters approach should be used to make it possible to migrate to other cloud providers or even on-premise infrastructure.</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -615,11 +651,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_business_context">3.1. Business Context</h3>
-<div class="paragraph">
-<p><strong>&lt;Diagram or Table&gt;</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="./images/03_business_context.excalidraw.png" alt="03 business context.excalidraw">
+</div>
+<div class="title">Figure 1. Business context of FlexiMind.</div>
 </div>
 <div class="paragraph">
-<p><strong>&lt;optionally: Explanation of external domain interfaces&gt;</strong></p>
+<p>FlexiMind focuses on privacy but allows an explicit usage of public resources such as public LLMs (GPT models from OpenAI) as well as public resources of data (such as web pages).</p>
+</div>
+<div class="paragraph">
+<p>An user is able to define context that is fully private if his business case requires so.</p>
 </div>
 </div>
 <div class="sect2">
@@ -651,7 +693,7 @@ The outcomes of these searches are then employed to augment the context. This au
 <div class="content">
 <img src="./images/04_rag_approach.excalidraw.png" alt="04 rag approach.excalidraw">
 </div>
-<div class="title">Figure 1. A brief overview of RAG approach used in FlexiMind.</div>
+<div class="title">Figure 2. A brief overview of RAG approach used in FlexiMind.</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -701,13 +743,13 @@ The outcomes of these searches are then employed to augment the context. This au
 <div class="content">
 <img src="./images/05_whitebox.excalidraw.png" alt="Whitebox">
 </div>
-<div class="title">Figure 2. Overall FlexiMind system.</div>
+<div class="title">Figure 3. Overall FlexiMind system.</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="./images/05_domain.drawio.png" alt="Domain">
 </div>
-<div class="title">Figure 3. Domain model</div>
+<div class="title">Figure 4. Domain model</div>
 </div>
 <div class="paragraph">
 <p><em><strong>&lt;Overview Diagram&gt;</strong></em></p>
@@ -986,7 +1028,7 @@ building block instances depicted in this diagram.&gt;</em></p>
 <div id="footer">
 <div id="footer-text">
 Version 8.2 EN<br>
-Last updated 2023-10-19 09:49:32 UTC
+Last updated 2024-01-03 08:59:00 UTC
 </div>
 </div>
 </body>

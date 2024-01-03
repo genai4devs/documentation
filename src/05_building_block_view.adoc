@@ -15,19 +15,56 @@ image::05_whitebox.excalidraw.png[Whitebox]
 .Domain model
 image::05_domain.drawio.png[Domain]
 
-_**<Overview Diagram>**_
-
-Motivation::
-
-_<text explanation>_
-
-
 Contained Building Blocks::
-_<Description of contained building block (black boxes)>_
+
+[cols="2,3"]
+|===
+|Building Block|Description
+
+|
+chat
+|
+Core chat domain responsible for semantic indexing of the documents, querying the documents in context of conversation and keeping conversation history.
+
+|===
 
 Important Interfaces::
-_<Description of important interfaces>_
 
+[cols="2,3"]
+|===
+|Interface|Description
+
+|
+Cognito
+|
+Authentication and authorization service.
+
+|
+S3 Bucket
+|
+Document storage to keep document sources.
+
+|
+Aurora
+|
+Serverless database service (using PostgreSQL + PG_Vector) for document indexing and semantic search.
+
+|
+Amazon Bedrock
+|
+Serverless LLM service to provide base large language models for private conversations.
+
+|
+Open AI
+|
+Open connection with OpenAI provided LLMs (GPT-3.5/GPT-4) used for public conversations.
+
+|
+Dynamo DB
+|
+Document database for persisting conversations, contexts and tenant data.
+
+|===
 
 
 

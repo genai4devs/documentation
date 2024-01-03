@@ -4,4 +4,12 @@ ifndef::imagesdir[:imagesdir: ../images]
 == Architecture Constraints
 
 
+[options="header",cols="1,3,6"]
+|===
+| ID | Constraint | Description
+| AC-1 | Python | The core logic that involves interaction with LLM should use bleeding edge libraries and API, therefore we should focus on Python as a main programming language for coding the backend part. 
+| AC-2 | Cloud/AWS | The application must be cloud ready using cloud native approach (AWS).
+| AC-3 | Cost effectiveness | The application should not generate extensive costs when not in use, that implies serverless solution.
+| AC-4 | Infrastructure independence | Although Fleximind is implemented as AWS native application, ports and adapters approach should be used to make it possible to migrate to other cloud providers or even on-premise infrastructure.
+|===
 

@@ -4,16 +4,15 @@ ifndef::imagesdir[:imagesdir: ../images]
 == System Scope and Context
 
 
-
-
-
 === Business Context
 
+.Business context of FlexiMind.
+image::03_business_context.excalidraw.png[]
 
 
-**<Diagram or Table>**
+FlexiMind focuses on privacy but allows an explicit usage of public resources such as public LLMs (GPT models from OpenAI) as well as public resources of data (such as web pages).
 
-**<optionally: Explanation of external domain interfaces>**
+An user is able to define context that is fully private if his business case requires so.
 
 === Technical Context
 

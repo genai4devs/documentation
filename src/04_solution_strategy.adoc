@@ -15,21 +15,37 @@ image::04_rag_approach.excalidraw.png[]
 |===
 |Quality goal|Scenario|Solution approach
 
-|Speed
-|Solution should provide answers in reasonable time.
-|Cloud based scaling, fast knowledge access with Amazon Kendra.
+|
+Q-1 Privacy
+|
+Solution should be applicable for storing and quering sensitive data.
+|
+Ability to work with locally hosted LLMs, ability to run on private cloud (VPC).
+Providing explicit information about guaranteed level of privacy.
 
-|Privacy
-|Solution should be applicable for storing and quering sensitive data.
-|Ability to work with locally hosted LLMs, ability to run on private cloud.
+|
+Q-1 Privacy
+|
+Users belonging to different groups should not see each other information.
+|
+System suports multi tenancy.
+Each user group has its own konwledge base.
+Conversation history is stored per user.
+Contexts are defined per tenant.
 
-|Accuracy
-|Solution should be fine tuned for requested domain knowledge.
-|Use of RAG, semantic searching and indexing.
+|
+Q-2 Information tracking
+|
+User wants to verify the correctness of the generated text.
+|
+Storing meta information in semantic search index and providing links to the source information to the user.
 
-|Cost effectiveness
-|Solution should be flexible for different cost options.
-|Proper usage of AWS services, ability to run on other cloud providers and also on private clouds.
+|
+Q-3 Accuracy
+|
+Solution should be fine tuned for requested domain knowledge.
+|
+Use of RAG, semantic searching and indexing. Proper prompt engineering that quarantees lack of hallucinated answers (answers must be limited to the provided knowlege).
 
 
 |===

@@ -20,6 +20,13 @@ FlexiMind is a chatbot which can be asked questions about specific text content.
 
 === Quality Goals
 
+[options="header",cols="1,3,6"]
+|===
+|ID|Quality Goal|Description
+|Q-1| Explicit privacy | FlexiMind informs user if given context is safe in terms of data privacy.
+|Q-2| Information tracking | FlexiMind allows to track to the source of information provided by the chatbot.
+|Q-3| No hallucination | FlexiMind does not generate hallucinated answers, it should say "I don't know" if answer is not known to the Chatbot.
+|===
 
 
 === Stakeholders

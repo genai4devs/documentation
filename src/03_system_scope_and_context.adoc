@@ -16,10 +16,8 @@ An user is able to define context that is fully private if his business case req
 
 === Technical Context
 
+.Technical context of FlexiMind.
+image::03_technical_context.excalidraw.png[]
 
-
-**<Diagram or Table>**
-
-**<optionally: Explanation of technical interfaces>**
-
-**<Mapping Input/Output to Channels>**
+As a cloud service, FlexiMind utilizes the cloud infrastructure of AWS including persistence and LMM services within its account.
+External communication is solely realized via HTTPS interface either with public LLM, public document resources as well as with user's browser.

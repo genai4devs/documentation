@@ -471,24 +471,28 @@ The outcomes of these searches are then employed to augment the context. This au
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Speed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should provide answers in reasonable time.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud based scaling, fast knowledge access with Amazon Kendra.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Privacy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-1 Privacy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be applicable for storing and quering sensitive data.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ability to work with locally hosted LLMs, ability to run on private cloud.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ability to work with locally hosted LLMs, ability to run on private cloud (VPC).
+Providing explicit information about guaranteed level of privacy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Accuracy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-1 Privacy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Users belonging to different groups should not see each other information.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System suports multi tenancy.
+Each user group has its own konwledge base.
+Conversation history is stored per user.
+Contexts are defined per tenant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-2 Information tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User wants to verify the correctness of the generated text.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storing meta information in semantic search index and providing links to the source information to the user.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-3 Accuracy</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be fine tuned for requested domain knowledge.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use of RAG, semantic searching and indexing.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cost effectiveness</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Solution should be flexible for different cost options.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proper usage of AWS services, ability to run on other cloud providers and also on private clouds.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use of RAG, semantic searching and indexing. Proper prompt engineering that quarantees lack of hallucinated answers (answers must be limited to the provided knowlege).</p></td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +501,7 @@ The outcomes of these searches are then employed to augment the context. This au
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-03 09:25:09 UTC
+Last updated 2024-01-03 14:22:43 UTC
 </div>
 </div>
 </body>
